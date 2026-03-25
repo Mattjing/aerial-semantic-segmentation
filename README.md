@@ -1,6 +1,6 @@
-# Aerial Perspective Semantic Segmentation (SEP 769)
+# Aerial Perspective Semantic Segmentation
 
-Semantic segmentation of aerial drone imagery using U-Net with multiple encoder backbones (EfficientNet-B3, MobileNet, ResNet-50, VGG-11). Built for the SEP 769 course at McMaster University.
+Semantic segmentation of aerial drone imagery using U-Net with multiple encoder backbones (EfficientNet-B3, MobileNet, ResNet-50, VGG-11). 
 
 ## Project Overview
 
