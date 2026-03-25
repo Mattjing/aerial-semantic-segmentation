@@ -8,20 +8,26 @@ The goal is to classify each pixel of top-down drone images into one of **23 sem
 
 **Dataset**: [Semantic Drone Dataset](https://www.kaggle.com/bulentsiyah/semantic-drone-dataset) — 400 drone images at 6000×4000 px with pixel-accurate annotations.
 
-## Repository Contents
+## Repository Structure
 
-| File | Description |
-|------|-------------|
-| `Aerial.ipynb` | Main training & evaluation notebook (U-Net variants) |
-| `fpn-efficientnetb3-huuthocse.ipynb` | FPN with EfficientNet-B3 backbone experiment |
-| `semantic-segmentation-is-easy-with-pytorch.ipynb` | Reference PyTorch segmentation pipeline |
-| `Unet-Efficientnet.pt` | Trained U-Net + EfficientNet-B3 weights |
-| `Unet-Mobilenet.pt` | Trained U-Net + MobileNet weights |
-| `Unet-resnet50.pt` | Trained U-Net + ResNet-50 weights |
-| `Unet-vgg11.pt` | Trained U-Net + VGG-11 weights |
-| `archive/class_dict_seg.csv` | Class name ↔ RGB colour mapping (23 classes) |
-| `Area segment.png` | Sample segmentation result |
-| `mobilenet_test_1.png` | MobileNet inference example |
+```
+aerial-semantic-segmentation/
+├── scripts/                  # Training & inference Python scripts
+│   ├── Aerial.py             # Main U-Net training & evaluation script
+│   ├── fpn-efficientnetb3-huuthocse.py       # FPN + EfficientNet-B3 experiment
+│   └── semantic-segmentation-is-easy-with-pytorch.py  # Reference pipeline
+├── models/                   # Trained model weights (stored via Git LFS)
+│   ├── Unet-Efficientnet.pt
+│   ├── Unet-Mobilenet.pt
+│   ├── Unet-resnet50.pt
+│   └── Unet-vgg11.pt
+├── data/
+│   └── class_dict_seg.csv    # Class name ↔ RGB colour mapping (23 classes)
+├── results/                  # Sample segmentation output images
+│   ├── Area segment.png
+│   └── mobilenet_test_1.png
+└── README.md
+```
 
 > **Model weights** are stored via [Git LFS](https://git-lfs.github.com/).
 
@@ -53,7 +59,7 @@ archive/
 
 ### Running
 
-Open any notebook in Jupyter and update the `img_path` / `mask_path` variables to point to your local dataset directory, then run all cells.
+Open any script in `scripts/` and update the `img_path` / `mask_path` variables to point to your local dataset directory, then run it directly or inside a Jupyter environment.
 
 ## Model Results
 
