@@ -1,0 +1,31 @@
+# Large installers and archives
+*.exe
+*.zip
+cudnn-*/
+
+# Virtual environments
+env/
+.venv/
+venv/
+Aerial Semantic Segmentation/env/
+Aerial Semantic Segmentation/.venv/
+pythonProject/
+
+# IDE folders
+.idea/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Dataset (too large for git — download from Kaggle: https://www.kaggle.com/bulentsiyah/semantic-drone-dataset)
+archive/dataset/
+archive/RGB_color_image_masks/
+
+# OS files
+.DS_Store
+Thumbs.db
