@@ -1,3 +1,6 @@
+# Local-only folders
+docs/
+
 # Large installers and archives
 *.exe
 *.zip
